@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: app
+    command: bundle exec ruby main.rb -o 0.0.0.0
+    volumes:
+      - ./app:/app
+      - bundle:/usr/local/bundle
+    ports:
+      - 4567:4567
+
+volumes:
+  bundle:
