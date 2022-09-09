@@ -1,13 +1,20 @@
 version: "3"
 
+x-app-base: &app-base
+  build:
+    context: app
+  volumes:
+    - ./app:/app
+    - bundle:/usr/local/bundle
+
 services:
+  base:
+    <<: *app-base
+    command: bundle install
+
   app:
-    build:
-      context: app
+    <<: *app-base
     command: bundle exec ruby main.rb -o 0.0.0.0
-    volumes:
-      - ./app:/app
-      - bundle:/usr/local/bundle
     ports:
       - 4567:4567
 
