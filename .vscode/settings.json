@@ -1,0 +1,6 @@
+{
+  "ruby.rubocop.executePath": "./bin/",
+  "[ruby]": {
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  },
+}

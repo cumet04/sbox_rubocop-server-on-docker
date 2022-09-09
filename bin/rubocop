@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd $(dirname $0)/..
+
+OPTION=$(test -p /dev/stdin && echo '-T')
+docker compose exec $OPTION app rubocop --server $@
