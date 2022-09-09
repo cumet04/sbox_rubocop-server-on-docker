@@ -6,4 +6,4 @@ gem 'puma'
 gem 'sinatra'
 gem 'sinatra-reloader'
 
-gem 'rubocop', '1.31'
+gem 'rubocop'

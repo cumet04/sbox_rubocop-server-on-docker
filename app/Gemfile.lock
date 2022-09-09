@@ -51,7 +51,7 @@ PLATFORMS
 
 DEPENDENCIES
   puma
-  rubocop (= 1.31)
+  rubocop
   sinatra
   sinatra-reloader
 
